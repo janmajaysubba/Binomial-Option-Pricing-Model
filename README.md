@@ -32,19 +32,24 @@ python binomial_greeks.py
 
 ### 3. Import into your own Python scripts
 ```python
-from binomial_greeks import binomial_price, greeks_binomial
+# Parameters
+    S, K, T, r, sigma, q, N = 100, 100, 0.75, 0.04, 0.2, 0.01, 400
 
-# Price an American call option
-price = binomial_price(100, 100, 0.75, 0.04, 0.2, N=200, option='call', style='amer')
-print(f"Option Price: {price:.2f}")
+    # Price an American call option
+    price = binomial_price(S, K, T, r, sigma, N, option='call', style='amer', q=q)
+    print("Option Price:", round(price, 2))
 
-# Calculate Greeks
-greeks = greeks_binomial(100, 100, 0.75, 0.04, 0.2, N=200)
-print(greeks)
+    # Compute Greeks
+    greeks = greeks_binomial(S, K, T, r, sigma, N, option='call', style='amer', q=q)
+    print(
+    "Delta: {d:.4f} | Gamma: {g:.6f} | Theta/yr: {t:.2f} | Vega: {v:.2f} | Rho: {r_: .2f}"
+    .format(d=greeks['delta'], g=greeks['gamma'], t=greeks['theta'],
+            v=greeks['vega'], r_=greeks['rho'])
+)
 ```
 
 ## Example Output
 ```rust
-Option Price: 6.78
-{'price': 6.7823, 'delta': 0.545, 'gamma': 0.012, 'theta': -6.23, 'vega': 25.14, 'rho': 41.52}
+Option Price: 7.93
+Delta: 0.5813 | Gamma: 3.865473 | Theta/yr: -5.89 | Vega: 33.48 | Rho:  37.65
 ```
