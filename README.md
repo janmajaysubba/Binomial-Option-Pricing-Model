@@ -24,7 +24,7 @@ git clone https://github.com/janmajaysubba/binomial-option-pricing-model.git
 cd binomial-option-pricing-model
 ```
 
-###2. Run the example
+### 2. Run the example
 ```bash
 python binomial_greeks.py
 ```
