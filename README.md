@@ -1,21 +1,20 @@
 # Binomial-Option-Pricing-Model
 This project implements a **Binomial Options Pricing Model** (also known as the **Cox–Ross–Rubinstein model**) in Python to price both **American and European options** with **continuous dividend yields **, including a **Greeks calculator** for Delta, Gamma, Theta, Vega, and Rho.  
 
-Based on the Binomial Options Pricing concepts from *Sheldon Natenberg's* **"Options, Volatility, and Pricing"**.
+I built this project based on the Binomial Options Pricing concepts from *Sheldon Natenberg's* **"Options, Volatility, and Pricing"**.
 
 ## Features
-- American and European option pricing
-- Call and Put support
-- Continuous dividend yield (`q`)
-- Greeks calculation:
-  - Delta
-  - Gamma
-  - Theta
-  - Vega
-  - Rho
+- Supports both **American** and **European** style options 
+- Handles **Call** and **Put** options
+- Includes **Continuous Dividend Yield** parameter (`q`)
+- Calculates **Option Price** and **Greeks**
+- Adjustable **time steps (N)** for accuracy vs. speed
 
 ## Requirements
-- NumPy (`pip install numpy`)
+- NumPy
+```bash
+pip install numpy
+```
 
 ## Usage
 
@@ -32,6 +31,8 @@ python binomial_greeks.py
 
 ### 3. Import into your own Python scripts
 ```python
+from binomial_greeks import binomial_price, greeks_binomial
+
 # Parameters
     S, K, T, r, sigma, q, N = 100, 100, 0.75, 0.04, 0.2, 0.01, 400
 
