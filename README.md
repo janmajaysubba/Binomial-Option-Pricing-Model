@@ -8,7 +8,7 @@ I built this project based on the Binomial Options Pricing concepts from *Sheldo
 - Handles **Call** and **Put** options
 - Includes **Continuous Dividend Yield** parameter (`q`)
 - Calculates **Option Price** and **Greeks**
-- Adjustable **time steps (N)** for accuracy vs. speed
+- Adjustable **time steps (`N`)** for accuracy vs. speed
 
 ## Requirements
 - NumPy
