@@ -10,6 +10,17 @@ This project is based on the Binomial Options Pricing concepts from *Sheldon Nat
 - Calculates **Option Price** and **Greeks**
 - Adjustable **time steps (`N`)** for accuracy vs. speed
 
+## Limitations 
+
+- Assumes constant volatility and interest rates over the option’s life.
+- Models dividends as a continuous yield `q` — discrete dividends are not handled.
+- Binomial parameters may produce unstable probabilities for very short maturities or extreme inputs (e.g., very high volatility).
+- Accuracy depends on the number of steps `N`; very small `N` can cause large errors, while very large `N` increases runtime.
+- Greeks are computed numerically via finite differences and may vary with bump size and `N`.
+
+This project is a **basic, educational implementation** of the Cox–Ross–Rubinstein (CRR) binomial option pricing model with Greek calculations via finite differences.  
+It is designed to demonstrate core option pricing concepts in Python, rather than to serve as a production-ready trading tool.
+
 ## Requirements
 - NumPy
 ```bash
@@ -49,8 +60,11 @@ from binomial_greeks import binomial_price, greeks_binomial
 )
 ```
 
+
 ## Example Output
 ```rust
 Option Price: 7.93
 Delta: 0.5813 | Gamma: 3.865473 | Theta/yr: -5.89 | Vega: 33.48 | Rho:  37.65
 ```
+
+
