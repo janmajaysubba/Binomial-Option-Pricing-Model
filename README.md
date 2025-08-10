@@ -21,7 +21,7 @@ This project is based on the Binomial Options Pricing concepts from *Sheldon Nat
 - Greeks are computed numerically via finite differences and may vary with bump size and `N`.
 
 This project is a **basic, educational implementation** of the Cox–Ross–Rubinstein (CRR) binomial option pricing model with Greek calculations via finite differences.  
-It is designed to demonstrate core option pricing concepts in Python, rather than to serve as a production-ready trading tool.
+It is designed to demonstrate core option pricing concepts in Python, rather than to serve as a trading tool.
 
 
 ## Requirements
