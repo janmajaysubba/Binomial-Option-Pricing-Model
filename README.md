@@ -3,12 +3,14 @@ This project implements a **Binomial Options Pricing Model** (also known as the 
 
 This project is based on the Binomial Options Pricing concepts from *Sheldon Natenberg's* **"Options, Volatility, and Pricing"**.
 
+
 ## Features
 - Supports both **American** and **European** style options 
 - Handles **Call** and **Put** options
 - Includes **Continuous Dividend Yield** parameter (`q`)
 - Calculates **Option Price** and **Greeks**
 - Adjustable **time steps (`N`)** for accuracy vs. speed
+  
 
 ## Limitations 
 
@@ -21,11 +23,13 @@ This project is based on the Binomial Options Pricing concepts from *Sheldon Nat
 This project is a **basic, educational implementation** of the Cox–Ross–Rubinstein (CRR) binomial option pricing model with Greek calculations via finite differences.  
 It is designed to demonstrate core option pricing concepts in Python, rather than to serve as a production-ready trading tool.
 
+
 ## Requirements
 - NumPy
 ```bash
 pip install numpy
 ```
+
 
 ## Usage
 
